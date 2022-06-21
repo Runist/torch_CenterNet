@@ -70,6 +70,8 @@ Or use script to run
 sh scripts/predict.sh
 ```
 
+![dog.jpg](https://s2.loli.net/2022/06/21/RM9fQGgKwumy8is.jpg)
+
 ## Train your dataset
 
 We provide three dataset format for this repository "yolo", "coco", "voc",You need create new annotation file for "yolo", the format of "yolo" is:
