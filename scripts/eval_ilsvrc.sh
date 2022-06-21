@@ -1,0 +1,12 @@
+python tools/evaluate.py \
+  --gpu=2 \
+  --input_height=416 \
+  --input_width=416 \
+  --dataset_val_path="./data/ImageNet/ILSVRC/ImageSets/DET/val.txt" \
+  --image_val_dir="./data/ImageNet/ILSVRC/Data/DET/val/" \
+  --annotation_val_dir="./data/ImageNet/ILSVRC/Annotations/DET/val/" \
+  --dataset_format="ilsvrc" \
+  --num_classes=200 \
+  --classes_info_file="./data/ilsvrc.txt" \
+  --outputs_dir="./outputs/ilsvrc/" \
+  --test_weight="./logs/yolo_ilsvrc/weights/epoch=198_loss=0.8236_val_loss=5.0576.pt"

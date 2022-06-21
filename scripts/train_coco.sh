@@ -1,0 +1,20 @@
+python tools/train.py \
+  --gpu=0,1,2,3 \
+  --input_height=416 \
+  --input_width=416 \
+  --dataset_train_path="./data/coco/annotations/instances_train2017.json" \
+  --dataset_val_path="./data/coco/annotations/instances_val2017.json" \
+  --image_train_dir="./data/coco/train2017" \
+  --image_val_dir="./data/coco/val2017" \
+  --dataset_format="coco" \
+  --num_classes=80 \
+  --classes_info_file="./data/coco.txt" \
+  --pretrain_weight_path="./logs/yolo_ilsvrc/weights/epoch=144_loss=0.9981_val_loss=4.5338.pt" \
+  --learn_rate_init=3e-4 \
+  --learn_rate_end=1e-6 \
+  --num_workers=8 \
+  --freeze_epochs=50 \
+  --unfreeze_epochs=100 \
+  --freeze_batch_size=160 \
+  --unfreeze_batch_size=80 \
+  --logs_dir="./logs/coco"

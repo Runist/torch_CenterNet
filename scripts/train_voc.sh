@@ -1,0 +1,22 @@
+python tools/train.py \
+  --gpu=1,2 \
+  --input_height=416 \
+  --input_width=416 \
+  --dataset_train_path="./data/VOCdevkit/VOC2007/ImageSets/Main/train.txt" \
+  --dataset_val_path="./data/VOCdevkit/VOC2007/ImageSets/Main/val.txt" \
+  --image_train_dir="./data/VOCdevkit/VOC2007/JPEGImages/" \
+  --image_val_dir="./data/VOCdevkit/VOC2007/JPEGImages/" \
+  --annotation_train_dir="./data/VOCdevkit/VOC2007/Annotations/" \
+  --annotation_val_dir="./data/VOCdevkit/VOC2007/Annotations/" \
+  --dataset_format="voc" \
+  --num_classes=20 \
+  --classes_info_file="./data/voc.txt" \
+  --num_workers=12 \
+  --pretrain_weight_path="./resnet50.pth" \
+  --learn_rate_init=1e-4 \
+  --learn_rate_end=1e-6 \
+  --freeze_epochs=50 \
+  --unfreeze_epochs=100 \
+  --freeze_batch_size=90 \
+  --unfreeze_batch_size=34 \
+  --logs_dir="./logs/voc"

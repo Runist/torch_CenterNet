@@ -1,0 +1,12 @@
+python tools/evaluate.py \
+  --gpu=0 \
+  --input_height=416 \
+  --input_width=416 \
+  --dataset_val_path="./data/VOC2012/ImageSets/Main/val.txt" \
+  --image_val_dir="./data/VOC2012/JPEGImages/" \
+  --annotation_val_dir="./data/VOC2012/Annotations/" \
+  --dataset_format="voc" \
+  --num_classes=20 \
+  --classes_info_file="./data/voc.txt" \
+  --outputs_dir="./outputs/voc/" \
+  --test_weight="./logs/voc/weights/epoch=149_loss=1.0000_val_loss=4.0783.pt"

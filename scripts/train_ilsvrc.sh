@@ -1,0 +1,22 @@
+python tools/train.py \
+  --gpu=0 \
+  --input_height=416 \
+  --input_width=416 \
+  --dataset_train_path="./data/ImageNet/ILSVRC/ImageSets/DET/train.txt" \
+  --dataset_val_path="./data/ImageNet/ILSVRC/ImageSets/DET/val.txt" \
+  --image_train_dir="./data/ImageNet/ILSVRC/Data/DET/train/" \
+  --image_val_dir="./data/ImageNet/ILSVRC/Data/DET/val/" \
+  --annotation_train_dir="./data/ImageNet/ILSVRC/Annotations/DET/train/" \
+  --annotation_val_dir="./data/ImageNet/ILSVRC/Annotations/DET/val/" \
+  --dataset_format="ilsvrc" \
+  --num_classes=200 \
+  --classes_info_file="./data/ilsvrc.txt" \
+  --num_workers=12 \
+  --pretrain_weight_path="./resnet50.pth" \
+  --learn_rate_init=1e-4 \
+  --learn_rate_end=1e-6 \
+  --freeze_epochs=50 \
+  --unfreeze_epochs=100 \
+  --freeze_batch_size=32 \
+  --unfreeze_batch_size=26 \
+  --logs_dir="./logs/ilsvrc"

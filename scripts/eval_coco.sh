@@ -1,0 +1,11 @@
+python tools/evaluate.py \
+  --gpu=0 \
+  --input_height=416 \
+  --input_width=416 \
+  --dataset_val_path="./data/coco/annotations/instances_val2017.json" \
+  --image_val_dir="./data/coco/val2017" \
+  --dataset_format="coco" \
+  --num_classes=80 \
+  --classes_info_file="./data/coco.txt" \
+  --outputs_dir="./outputs/coco/" \
+  --test_weight="./logs/coco/weights/epoch=149_loss=1.3958_val_loss=2.8635.pt"
