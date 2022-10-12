@@ -33,7 +33,7 @@ bicycle
 ...
 tvmonitor
 ```
-5. Configure the parameters in [tools/args.py](https://github.com/Runist/Siam-NestedUNet/blob/master/utils/parser.py).
+5. Configure the parameters in [tools/args.py](https://github.com/Runist/torch_CenterNet/blob/master/tools/args.py).
 6. Start train your model.
 
 ```shell
