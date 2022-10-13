@@ -17,7 +17,7 @@ git clone https://github.com/Runist/torch_CenterNet
 
 ```shell
 cd torch_CenterNet
-pip installl -r requirements.txt
+pip install -r requirements.txt
 ```
 3. Download the Pascal dataset or COCO dataset. Create new folder name call "data" and symbolic link for your dataset.
 ```shell
